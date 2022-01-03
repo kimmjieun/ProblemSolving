@@ -2,7 +2,7 @@
 
 
 
-###  <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width="30"> 1495번 :: 기타리스트 
+###  <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width="25"> 기타리스트 (22-01-02 완료)
 
 https://www.acmicpc.net/problem/1495
 
@@ -11,4 +11,38 @@ https://www.acmicpc.net/problem/1495
 처음에 문제를 잘못접근했다 ... 중간에 볼륨 조절이 필수다 이전과 동일한 볼륨이면 안된다
 
 DP 인덱스범위도 잘 잡아야한다 연주 시작 볼륨이 있기때문이다 --> dp\[0][S]
+
+
+
+
+
+<img src ="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width="25"> 미세먼지 안녕!
+
+ https://www.acmicpc.net/problem/17144
+
+
+
+### <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width="25"> 공장 컨설턴트 호석 (22-01-03 완료)
+
+ https://www.acmicpc.net/problem/22254
+
+이분탐색 + 우선순위 큐로 풀어야하는 문제 (문제를 읽고 바로 이 유형이구나 알아차리기만 한다면 쉽다..ㅜㅜ)
+
+문제만 제대로 이해하면 코드 짜는데는 크게 문제가 없다
+
+재미있게 풀었다
+
+
+
+<img src ="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width="25"> 중량제한
+
+ https://www.acmicpc.net/problem/1939
+
+
+
+<img src ="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width="25"> 카드게임
+
+https://www.acmicpc.net/problem/11062
+
+
 
