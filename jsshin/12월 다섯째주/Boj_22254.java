@@ -48,6 +48,7 @@ public class Boj_22254 {
 			}
 		}
 		
+		// right+1 을 해도 동일하다 (right = mid-1 을 해서 그런거 같다)
 		System.out.println(answer);
 	}
 
