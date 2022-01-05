@@ -14,8 +14,6 @@ DP 인덱스범위도 잘 잡아야한다 연주 시작 볼륨이 있기때문�
 
 
 
-
-
 <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width="25"> 미세먼지 안녕!
 
  https://www.acmicpc.net/problem/17144
@@ -40,9 +38,19 @@ DP 인덱스범위도 잘 잡아야한다 연주 시작 볼륨이 있기때문�
 
 
 
-<img src ="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width="25"> 카드게임
+### <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width="25"> 카드게임 (22-01-05 완료)
 
 https://www.acmicpc.net/problem/11062
+
+너무 너무 어려웠던 문제 한 3일을 계속 검색하면서 머리로 문제를 이해할려고 노력했다
+
+다른사람의 코드를 봐도 왜 이렇게 짰지? 더 이해가 안가기 시작했다
+
+직접 코드를 작성해보니 그나마 이해가 잘간다 
+
+DP는 진짜 너무 어렵다 .... 눈물 
+
+*** 3차원 DP로 풀었을 경우 시간이 너무 많이 소요됐다 
 
 
 
