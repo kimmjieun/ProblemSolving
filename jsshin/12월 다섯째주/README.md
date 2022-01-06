@@ -14,9 +14,15 @@ DP 인덱스범위도 잘 잡아야한다 연주 시작 볼륨이 있기때문�
 
 
 
-<img src ="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width="25"> 미세먼지 안녕!
+### <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width="25"> 미세먼지 안녕! (22-01-06 완료)
 
  https://www.acmicpc.net/problem/17144
+
+구현문제 쉽게 풀 수 있었다 
+
+2차원배열에 먼지 /5 만 신경써주면 되는 일 ! 
+
+졸려서 주석은 달지 못했다
 
 
 
@@ -32,9 +38,15 @@ DP 인덱스범위도 잘 잡아야한다 연주 시작 볼륨이 있기때문�
 
 
 
-<img src ="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width="25"> 중량제한
+### <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width="25"> 중량제한 (22-01-06 실패)
 
  https://www.acmicpc.net/problem/1939
+
+왜지.. 왜 안돌아가지... 공장컨설턴트 호석과 문제 유형이 비슷한 느낌 
+
+이분탐색 + bfs로 풀었는데 왜 6%에서 오류가 나는지 ㅠㅠ
+
+나중에 봤을 때 이해할려고 대충 주석 달아놨다 
 
 
 
