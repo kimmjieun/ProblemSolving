@@ -2,7 +2,7 @@
 
 
 
-###  <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width="25"> 감시 피하기
+###  <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width="25"> 감시 피하기 (2022-01-11 AC)
 
 https://www.acmicpc.net/problem/18428
 
@@ -20,13 +20,11 @@ https://www.acmicpc.net/problem/15684
 
 
 
-### <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width="25"> 저울
+### <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width="25"> 저울 (2022-01-11 AC)
 
 https://www.acmicpc.net/problem/2437
 
 
-
- 
 
 ### <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/14.svg" width="25">물통
 
