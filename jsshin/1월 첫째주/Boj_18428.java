@@ -47,10 +47,9 @@ public class Boj_18428 {
 		}
 	}
 	
-	private static void _combination(int cnt, int idx) {
+	private static void _combination(int cnt, int rowIdx) {
 		// 방해물 3개 격자에 채우기
 		if(cnt==3) {
-			
 			// 선생님의 감시
 			if(!_isTeacherWatching()) {
 				System.out.println("YES");
@@ -59,19 +58,18 @@ public class Boj_18428 {
 			return;
 		}
 		
-		int r = idx/N;
-		int c = idx%N;
-		
-		if(idx>=N*N) return;
-		
-		if(board[r][c]=='X') {
-			board[r][c]='O';
-			_combination(cnt+1, idx+1);
-			board[r][c]='X'; // 백트래킹, 원복
+		for(int r=rowIdx;r<N;r++) {
+			for(int c=0;c<N;c++) {
+				if(board[r][c]=='X') {
+					board[r][c]='O';
+					
+					// 다음 열 검사를 위해 행위치는 그대로 
+					_combination(cnt+1, r);
+					
+					board[r][c]='X'; // 백트래킹, 원복
+				}
+			}
 		}
-		
-		_combination(cnt, idx+1);
-		
 	}
 
 	private static boolean _isTeacherWatching() {
