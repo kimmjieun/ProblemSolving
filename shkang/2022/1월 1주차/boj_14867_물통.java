@@ -18,24 +18,7 @@ public class Main {
 		answer = -1;
 	}
 
-	static int isPossible(int a, int b) { // 동일한 패턴 반복으로 목표 달성이 되는가?
-		if (a == aGoal && b == bGoal)
-			return 1;
-		if (a == 0 && b == 0) {
-			return -1;
-		} else if (a == 0 && b != 0) {
-			return bGoal % b == 0 && a == aGoal ? bGoal / b : -1;
-		} else if (a != 0 && b == 0) {
-			return aGoal % a == 0 && b == bGoal ? aGoal / a : -1;
-		} else { // 둘 다 양수
-			if (aGoal % a == 0 && bGoal % b == 0 && aGoal / a == bGoal / b) {
-				return aGoal / a;
-			}
-		}
-		return -1;
-	}
-
-	static class Bucket {
+	static class Bucket implements Comparable<Bucket> {
 		int a, b;
 		int count = 0;
 
@@ -44,27 +27,41 @@ public class Main {
 			this.b = b;
 			this.count = count;
 		}
+
+		@Override
+		public int compareTo(Bucket o) {
+			return count - o.count;
+		}
+
+		@Override
+		public boolean equals(Object o) {
+			Bucket bucket = (Bucket) o;
+			return a == bucket.a && b == bucket.b;
+		}
+
+		@Override
+		public int hashCode() {
+			return Objects.hash(a, b);
+		}		
 	}
 
 	static void action() {
-		HashMap<String, Integer> visited = new HashMap<>();
-		Queue<Bucket> queue = new LinkedList<>();
+		HashMap<Bucket, Integer> visited = new HashMap<>();
+		PriorityQueue<Bucket> queue = new PriorityQueue<>();
 		queue.add(new Bucket(0, 0, 0));
 		while (!queue.isEmpty()) {
 			Bucket bucket = queue.poll();
-			String footPrint = String.valueOf(bucket.a) + "_" + String.valueOf(bucket.b);
-			if (visited.containsKey(footPrint)) { // 방문 기록 있는지 체크
-				if (visited.get(footPrint) <= bucket.count) {
+			if (visited.containsKey(bucket)) { // 방문 기록 있는지 체크
+				if (visited.get(bucket) <= bucket.count) {
 					continue;
 				} else { // 더 적은 경우라면
-					visited.put(footPrint, bucket.count);
+					visited.put(bucket, bucket.count);
 				}
 			} else {// 방문기록 없다면
-				visited.put(footPrint, bucket.count);
+				visited.put(bucket, bucket.count);
 			}
-			int result = isPossible(bucket.a, bucket.b);
-			if (result >= 0) {
-				answer = answer > -1 ? Math.min(bucket.count * result, answer) : result * bucket.count;
+			if(bucket.a==aGoal && bucket.b==bGoal) {
+				answer = bucket.count;
 				continue;
 			}
 			// Fill A
@@ -96,7 +93,7 @@ public class Main {
 				if (aSize - bucket.a >= bucket.b) {
 					queue.add(new Bucket(bucket.b + bucket.a, 0, bucket.count + 1));
 				} else {// B 양이 더 많은 경우
-					queue.add(new Bucket(aSize, bucket.b - (aSize-bucket.a), bucket.count + 1));
+					queue.add(new Bucket(aSize, bucket.b - (aSize - bucket.a), bucket.count + 1));
 				}
 			}
 		}
