@@ -8,13 +8,13 @@ https://www.acmicpc.net/problem/18428
 
 
 
-### <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width="25"> 배열 돌리기 4
+### <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width="25"> 배열 돌리기 4  (2022-01-14 AC)
 
 https://www.acmicpc.net/problem/17406
 
 
 
-### <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width="25"> 사다리 조작
+### <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width="25"> 사다리 조작 (2022-01-13 AC)
 
 https://www.acmicpc.net/problem/15684
 
