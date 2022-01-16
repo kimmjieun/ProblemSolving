@@ -64,13 +64,15 @@ public class Boj_1939 {
 			int mid = (left+right)/2;
 			
 			if(bfs(start,mid)) {
-				// 성공했으므로 크기를 작게 해본다
+				// mid 중량으로 갈 수 있으므로 
+				// 무게를 더 늘려본다
 				answer = mid;
-				right = mid-1;
+                left = mid+1;
 				
 			}else {
-				// 실패했으므로 크기를 키운다 
-				left = mid+1;
+				// mid 중량으로 갈 수 없다
+                right = mid-1;
+				
 			}
 		}
 		System.out.println(answer);
@@ -85,16 +87,15 @@ public class Boj_1939 {
 		
 		while(!queue.isEmpty()) {
 			int curr = queue.poll();
-			
-			// 도착지
 			if(curr==end) {
 				return true;
 			}
 			
 			for(Node n:graph[curr]) {
 				
-				// 방문하지 않았고, 중량이 작을 경우만 
-				if(!visited[n.vertex] && n.edge<=weight) {
+				// 방문하지 않았고, 다리가 중량을 버틸 수 있다면 
+				// *** 다음 다리로 이동이 가능하다 ***
+				if(!visited[n.vertex] && n.edge>=weight) {
 					visited[n.vertex] = true;
 					queue.add(n.vertex);
 				}

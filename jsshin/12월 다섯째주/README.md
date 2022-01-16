@@ -38,15 +38,21 @@ DP 인덱스범위도 잘 잡아야한다 연주 시작 볼륨이 있기때문�
 
 
 
-### <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width="25"> 중량제한 (22-01-06 실패)
+### <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width="25"> 중량제한 (22-01-09 성공)
 
  https://www.acmicpc.net/problem/1939
 
-왜지.. 왜 안돌아가지... 공장컨설턴트 호석과 문제 유형이 비슷한 느낌 
+공장컨설턴트 호석과 문제 유형이 비슷한 느낌 
 
-이분탐색 + bfs로 풀었는데 왜 6%에서 오류가 나는지 ㅠㅠ
+조건을 조금만 변경하였는데 바로 성공하였다
 
-나중에 봤을 때 이해할려고 대충 주석 달아놨다 
+Priority Queue를 써서 여러 무게의 다리가 있으므로 무게가 큰 다리부터 BFS를 돌게 했어야했나 싶었지만
+
+이분탐색과 BFS 조건을 변경하니 Priority Queue를 사용하지 않아도 됐다
+
+**다리무게가 중량보다 클경우만 이동이 가능하다** 이게 포인트다
+
+
 
 
 
