@@ -16,11 +16,15 @@ Map<String, HashSet> 구조로 푸는게 포인트인듯 하다
 
 ### Lv 2. k진수에서 소수 개수 구하기
 
-https://www.acmicpc.net/problem/17406
+https://programmers.co.kr/learn/courses/30/lessons/92335
 
-> 실행시간 276ms
+> 점수 85.7
 
+쉬운문제라고 생각해서 마지막에 풀었는데 놓친부분이 많나보다 끝 부분 테케가 다 틀렸습니다로 나왔다
 
+while문으로 k진수로 변환하고 stringbuilder를 사용하여 계속 뒤어넣었기때문에 reverse를 해줬다
+
+그리고 0으로 split하여 숫자가 있으면 소수 검사를 하였다 
 
 
 
