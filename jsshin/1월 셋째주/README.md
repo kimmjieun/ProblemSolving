@@ -14,15 +14,19 @@ https://www.acmicpc.net/problem/5569
 
 
 
-### <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width="25"> 트리인가
+### <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width="25"> 트리인가 (22-01-26 AC)
 
 https://www.acmicpc.net/problem/6416
 
-> 실행시간 276ms
+> 실행시간 128ms
 
-순열문제 + 구현문제였다
-순열을 비트연산자로 구현하였다
-회전연산정보를 가지고 순열로 경우의 수를 만들었다
+트리의 특징만 검사하면 되는 문제였다 (DFS 할 필요없음...)
+
+1.  트리의 루트노드는 1개 이하여야 한다  (노드가 없어도 트리이다 그때 루트노드는 없으므로...)
+2.  정점에 들어오는 간선은 하나여야한다 (Map을 사용해 검사하였다)
+3.  정점이 1개 이상일경우 , 정점의개수 = 간선의개수+1 이어야한다
+
+
 
 
 
