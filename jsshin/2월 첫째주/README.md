@@ -30,53 +30,23 @@ https://www.acmicpc.net/problem/21276
 
 
 
-### <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width="25"> 개똥벌레 (22-01-25 AC)
+### <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width="25"> 홀수 홀릭 호석(22-02-11 AC)
 
-https://www.acmicpc.net/problem/3020
+https://www.acmicpc.net/problem/20164
 
-> 실행시간 952ms
+> 실행시간 160ms
 
-위상정렬에 대해 알 수 있었던 문제였다
+부분통과
 
-위상정렬을 활용해서 문제를 풀면 쉽게 풀 수 있다 
+조합(백트래킹) + 재귀 문제였다 
 
+숫자가 3자리 이상일경우 끊을 수 있는 구간이 2개가 생기므로 조합 배열의 크기를 2로 잡았다
 
+숫자를 계속 더하므로 3자리 이상이 여러번 나올 수있으므로 prcoess 와 combination 함수가 계속 왔다갔다한다 
 
-
-
-### <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/14.svg" width="25"> 개미굴 (22-01-27 AC)
-
-https://www.acmicpc.net/problem/14725
-
-> 실행시간 200ms
-
-트리구현 + DFS 문제였다
-
-트리를 구현할 때 이미 부모가 있는 값일 경우 `return 재귀함수` 로 작성해줘야한다
-
-위 부분에서 시간을 많이 잡아먹었다 중복으로 계속 값이 들어갔기 때문이다 
-
-그리고 사전 순으로 조회해야하므로 Comparable를 상속받아서 compareTo를 오버라이딩 해야한다
+스택에 메소드가 쌓이므로 백트래킹을 위해서 더한 홀수의 값을 return 전에 빼준다
 
 
-
-
-
-### <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/15.svg" width="25"> 소수의 곱 (22-01-25 AC)
-
-https://www.acmicpc.net/problem/2014
-
-> 실행시간 272ms
-
-오름차순으로 나타내기 위해 PirorityQueue를 사용했으며 
-
-중복되는 값이 생기면 안되므로 ` if(tmpNum%ni==0) break; `조건문을 넣어줘야했다
-
-소수들을 priorityQueue에 다 넣어주고 하나씩 빼면서 
-
-곱한 값을 넣어주고 빼낸 값이 기존 소수로 나눠떨어지면 더 이상 곱하지 않는다 (다른 수로 만들 수 있다=중복값이 생긴다)
-
-**곱셈이므로 숫자가 커질수있다 Long 타입으로 해야한다**
 
 
 
