@@ -3,75 +3,71 @@ package feb.week1;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 public class Boj_20164_홀수홀릭호석 {
 
-	static int totalOdd;
-	static int min,max;
-	static int[] combArr = new int[2];
+	static int min, max;
+	static int[] combArr;
+
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String number = br.readLine();
-		
+
 		min = Integer.MAX_VALUE;
 		max = Integer.MIN_VALUE;
-		_process(number);
-		
-		System.out.println(min+" "+max);
-	
+		combArr = new int[2];
+
+		_process(number, 0);
+
+		System.out.println(min + " " + max);
+
 	}
 
-	private static void _process(String number) {
+	private static void _process(String number, int oddCnt) {
 		int cnt = 0;
-		for(char c : number.toCharArray()) {
-			if((c-'0')%2==1) {
+		for (char c : number.toCharArray()) {
+			if ((c - '0') % 2 == 1) {
 				cnt++;
 			}
 		}
-		totalOdd += cnt;
+		oddCnt += cnt;
 		if (number.length() == 1) {
-			min = Math.min(min, totalOdd);
-			max = Math.max(max, totalOdd);
-			totalOdd -= cnt;
+//			System.out.println(number);
+			min = Math.min(min, oddCnt);
+			max = Math.max(max, oddCnt);
+//			System.out.println("==========================="+totalOdd);
 			return;
-			
-		} else if (number.length() == 2) {
-			int sum = number.charAt(0)-'0' + number.charAt(1)-'0';
-			
-			// 9+9 = 18 2자리가 또 나올 수 있다
-			_process(String.valueOf(sum));
-			
-		} else if (number.length() >= 3) {
 
-			_combination(0,number);
+		} 
+		
+		if (number.length() == 2) {
+//			System.out.println(number.charAt(0)+"+"+ number.charAt(1));
+			int sum = number.charAt(0) - '0' + number.charAt(1) - '0';
+
+			// 9+9 = 18 2자리가 또 나올 수 있다
+			_process(Integer.toString(sum), oddCnt);
+			return;
+
 		}
-		totalOdd -= cnt;
+
+		for(int i=1;i<number.length();i++) {
+			for(int j=i+1;j<number.length();j++) {
+				
+				String sumNum = _splitNumber(i, j, number);
+				_process(sumNum,oddCnt);
+			}
+		}
 	}
 
-	private static void _combination(int cnt, String number) {
-		if(cnt==2) {
-			String num1 = number.substring(0, combArr[0]);
-			String num2 = number.substring(combArr[0],combArr[1]);
-			String num3 = number.substring(combArr[1]);
-			
-			int sum = Integer.parseInt(num1)+Integer.parseInt(num2)+Integer.parseInt(num3);
-			_process(String.valueOf(sum));
-			
-			return;
-		}
-		
-		if(cnt==0) {
-			for(int i=1;i<number.length()-1;i++) {
-				combArr[cnt] = i;
-				_combination(cnt+1, number);
-			}
-		}else {
-			for(int i=combArr[0]+1;i<number.length();i++) {
-				combArr[cnt] = i;
-				_combination(cnt+1, number);
-			}
-		}
+	private static String _splitNumber(int i, int j, String number) {
+//			System.out.println(i+" "+j);
+			String num1 = number.substring(0, i);
+			String num2 = number.substring(i, j);
+			String num3 = number.substring(j);
+//			System.out.println(num1+" + "+num2+" + "+num3);
+			int sum = Integer.parseInt(num1) + Integer.parseInt(num2) + Integer.parseInt(num3);
+
+			return Integer.toString(sum);
 	}
 
 }
