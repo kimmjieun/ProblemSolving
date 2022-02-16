@@ -12,17 +12,13 @@ https://www.acmicpc.net/problem/2252
 
 
 
-### <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width="25"> 트리인가 (22-01-26 AC)
+### <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width="25"> 후위표기식 (22-02-15 AC)
 
-https://www.acmicpc.net/problem/6416
+https://www.acmicpc.net/problem/1918
 
 > 실행시간 128ms
 
-트리의 특징만 검사하면 되는 문제였다 (DFS 할 필요없음...)
-
-1.  트리의 루트노드는 1개 이하여야 한다  (노드가 없어도 트리이다 그때 루트노드는 없으므로...)
-2.  정점에 들어오는 간선은 하나여야한다 (Map을 사용해 검사하였다)
-3.  정점이 1개 이상일경우 , 정점의개수 = 간선의개수+1 이어야한다
+스택을 사용해서 푸는 문제 , 연산자의 우선순의를 세팅해야한다 
 
 
 
@@ -30,7 +26,7 @@ https://www.acmicpc.net/problem/6416
 
 ### <img src ="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width="25"> 개똥벌레 (22-01-25 AC)
 
-https://www.acmicpc.net/problem/3020
+https://www.acmicpc.net/problem/1202
 
 > 실행시간 356ms
 
