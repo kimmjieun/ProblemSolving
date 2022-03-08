@@ -22,22 +22,18 @@ public class boj_2606 {
 
         boolean[] visit = new boolean[n + 1];
         visit[1] = true;
+
         Queue<Integer> q = new LinkedList<>();
-        for (int i = 1; i <= n; i++) {
-            if (arr[1][i] == 1 || arr[i][1] == 1) {
-                q.add(i);
-                visit[i] = true;
-            }
-        }
+        q.add(1);
 
         int count = 0;
         while (!q.isEmpty()) {
             int tmp = q.poll();
-            count += 1;
             for (int i = 1; i <= n; i++) {
-                if ((arr[tmp][i] == 1 || arr[i][tmp] == 1) && !visit[i]) {
+                if (arr[tmp][i] == 1 && !visit[i]) {
                     q.add(i);
                     visit[i] = true;
+                    count += 1;
                 }
             }
         }
