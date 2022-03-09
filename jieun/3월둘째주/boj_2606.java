@@ -10,33 +10,34 @@ public class boj_2606 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int n = Integer.parseInt(br.readLine());
-        int t = Integer.parseInt(br.readLine());
+        int m = Integer.parseInt(br.readLine());
 
         int[][] arr = new int[n + 1][n + 1];
-        for (int i = 0; i < t; i++) {
+        for (int i = 0; i < m; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
-            int x = Integer.parseInt(st.nextToken());
-            int y = Integer.parseInt(st.nextToken());
-            arr[x][y] = arr[y][x] = 1;
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+            arr[a][b] = arr[b][a] = 1;
         }
 
-        boolean[] visit = new boolean[n + 1];
-        visit[1] = true;
-
         Queue<Integer> q = new LinkedList<>();
+        boolean[] visit = new boolean[n + 1];
+
         q.add(1);
+        visit[1] = true;
 
         int count = 0;
         while (!q.isEmpty()) {
-            int tmp = q.poll();
+            int v = q.poll();
             for (int i = 1; i <= n; i++) {
-                if (arr[tmp][i] == 1 && !visit[i]) {
-                    q.add(i);
+                if (arr[v][i] == 1 && !visit[i]) {
                     visit[i] = true;
-                    count += 1;
+                    q.add(i);
+                    count++;
                 }
             }
         }
         System.out.println(count);
     }
+
 }
